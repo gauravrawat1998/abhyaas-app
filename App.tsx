@@ -6,7 +6,7 @@
  */
 
 import React from 'react';
-import type {PropsWithChildren} from 'react';
+import type { PropsWithChildren } from 'react';
 import {
   ScrollView,
   StatusBar,
@@ -28,7 +28,7 @@ type SectionProps = PropsWithChildren<{
   title: string;
 }>;
 
-function Section({children, title}: SectionProps): React.JSX.Element {
+function Section({ children, title }: SectionProps): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
   return (
     <View style={styles.sectionContainer}>
@@ -80,8 +80,8 @@ function App(): React.JSX.Element {
       />
       <ScrollView
         style={backgroundStyle}>
-        <View style={{paddingRight: safePadding}}>
-          <Header/>
+        <View style={{ paddingRight: safePadding }}>
+          <Header />
         </View>
         <View
           style={{
@@ -90,7 +90,7 @@ function App(): React.JSX.Element {
             paddingBottom: safePadding,
           }}>
           <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
+            Editt <Text style={styles.highlight}>App.tsx</Text> to change this
             screen and then come back to see your edits.
           </Section>
           <Section title="See Your Changes">
