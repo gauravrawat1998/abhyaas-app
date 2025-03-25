@@ -60,3 +60,21 @@ buck-out/
 # CocoaPods
 /ios/Pods/
 
+# Ignore Android CMake build files
+android/app/.cxx/
+android/app/cxx/
+android/app/build/
+android/.gradle/
+
+# Ignore iOS dependency and build files
+ios/Pods/
+ios/Podfile.lock
+ios/.xcode.env.local
+ios/build/
+ios/DerivedData/
+
+# Ignore Xcode project temporary files
+*.xcworkspace/
+*.xcodeproj/project.xcworkspace/
+*.xcodeproj/project.xcuserdatad/
+*.xcodeproj/xcuserdata/
