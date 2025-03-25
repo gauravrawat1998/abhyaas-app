@@ -31,28 +31,28 @@ type SectionProps = PropsWithChildren<{
   title: string;
 }>;
 
-function HomeScreen({navigation}:any) {
+function HomeScreen({ navigation }: any) {
   return (
     <View style={styles.sectionContainer}>
-      <Text onPress={()=>{navigation.navigate('Second')}}>Navigate</Text>
+      <Text onPress={() => { navigation.navigate('Second') }}>Navigate</Text>
     </View>
   );
 }
-function ProfileScreen({navigation}:any) {
+function ProfileScreen({ navigation }: any) {
   return (
     <View style={styles.sectionContainer}>
-      <Text onPress={()=>{navigation.navigate('Second')}}>Navigate</Text>
+      <Text onPress={() => { navigation.navigate('Second') }}>Navigate</Text>
     </View>
   );
 }
-function ProfileScreen2({navigation}:any) {
+function ProfileScreen2({ navigation }: any) {
   return (
     <View style={styles.sectionContainer}>
-      <Text onPress={()=>{navigation.navigate('Second')}}>Navigate</Text>
+      <Text onPress={() => { navigation.navigate('Second') }}>Navigate</Text>
     </View>
   );
 }
-function SecondScreen({navigation}:any) {
+function SecondScreen({ navigation }: any) {
   const MyDrawer = createDrawerNavigator();
   return (
     <MyDrawer.Navigator>
@@ -76,7 +76,7 @@ function App(): React.JSX.Element {
 
 const styles = StyleSheet.create({
   sectionContainer: {
-    flex:1,justifyContent:'center', alignItems:'center'
+    flex: 1, justifyContent: 'center', alignItems: 'center'
   },
   sectionTitle: {
     fontSize: 24,
