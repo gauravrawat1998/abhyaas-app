@@ -1,0 +1,3 @@
+/Users/nitinsharma/Desktop/Abhyaas/android/app/.cxx/Debug/k2ju6d5a/x86/CMakeFiles/appmodules.dir
+/Users/nitinsharma/Desktop/Abhyaas/android/app/.cxx/Debug/k2ju6d5a/x86/CMakeFiles/edit_cache.dir
+/Users/nitinsharma/Desktop/Abhyaas/android/app/.cxx/Debug/k2ju6d5a/x86/CMakeFiles/rebuild_cache.dir
