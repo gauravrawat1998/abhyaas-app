@@ -6,4 +6,5 @@ export default {
   grey: '#606060',
   blue: '#c1e5f5',
   dark_blue: '#82AEC1',
+  chip: '#0474a8',
 };
