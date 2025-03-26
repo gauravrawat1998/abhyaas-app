@@ -2,6 +2,7 @@ import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React from 'react';
 import images from '../../contants/images';
 import colors from '../../contants/colors';
+import LinearGradient from 'react-native-linear-gradient';
 
 interface ExamCardProps {
     topic: string;
@@ -13,17 +14,23 @@ const ExamCard = (props: ExamCardProps) => {
     const { topic, paper, mode } = props;
 
     return (
-        <View style={styles.cardContainer}>
+        <TouchableOpacity style={styles.cardContainer} activeOpacity={0.5}>
             <View style={styles.cardHeader}>
                 <View style={styles.cardHeaderLeft}>
                     <View style={styles.topicContainer}>
+                        <LinearGradient
+                            colors={['rgba(0,0,0,0.3)', 'rgba(0,0,0,0.1)', 'transparent']}
+                            style={styles.shadow}
+                        />
                         <Text style={styles.topic}>{topic}</Text>
                     </View>
                     <TouchableOpacity style={styles.cardHeaderRight}>
-                        <Image style={styles.bellIcon} source={images.bell} />
+                        <Image style={styles.bellIcon} source={images.bell} resizeMode='contain' />
                     </TouchableOpacity>
                 </View>
-                <Text style={styles.paperText}>{paper}</Text>
+                <View style={styles.paperShadow}>
+                    <Text style={styles.paperText}>{paper}</Text>
+                </View>
             </View>
             <View style={styles.cardFooter}>
                 <View style={styles.footerOption}>
@@ -43,7 +50,7 @@ const ExamCard = (props: ExamCardProps) => {
                     <Text style={styles.footerValue}>1 Min for each Quiz</Text>
                 </View>
             </View>
-        </View>
+        </TouchableOpacity>
     );
 };
 
@@ -64,6 +71,15 @@ const styles = StyleSheet.create({
         marginHorizontal: 16,
         marginTop: 23,
     },
+    shadow: {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        height: 20,
+        borderTopLeftRadius: 8,
+        borderBottomRightRadius: 80,
+    },
     cardHeader: {
     },
     cardHeaderLeft: {
@@ -72,29 +88,43 @@ const styles = StyleSheet.create({
         marginBottom: 10
     },
     topicContainer: {
-        flex: 0.9,
+        flex: 0.95,
         paddingLeft: 10,
         borderTopLeftRadius: 8,
         borderBottomRightRadius: 80,
         backgroundColor: colors.white,
     },
     cardHeaderRight: {
-        paddingRight: 10
+        paddingRight: 10,
+        marginTop: 5
     },
     topic: {
         fontSize: 10,
         fontWeight: '600',
         marginTop: 4
     },
-    paperText: {
+    paperShadow: {
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 3,
+        },
+        shadowOpacity: 0.6,
+        shadowRadius: 3,
+        elevation: 24,
+        backgroundColor: colors.white,
+        width: 100,
         borderWidth: 1,
         borderColor: colors.red,
         borderRadius: 35,
-        width: 100,
-        fontSize: 15,
+        alignItems: "center",
+        justifyContent: "center",
+        padding: 2,
+        alignSelf: "center"
+    },
+    paperText: {
+        fontSize: 14,
         fontWeight: '700',
-        textAlign: 'center',
-        alignSelf: 'center',
     },
     bellIcon: {
         width: 22,
@@ -108,7 +138,7 @@ const styles = StyleSheet.create({
         borderBottomLeftRadius: 8,
         borderBottomRightRadius: 8,
         paddingVertical: 5,
-        marginTop: 10
+        marginTop: 15
     },
     footerLabel: {
         fontSize: 8,

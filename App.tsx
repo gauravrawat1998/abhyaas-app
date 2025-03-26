@@ -24,6 +24,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Input from './src/components/Input';
 import Button from './src/components/Button';
 import ExamCard from './src/components/ExamCard';
+import Tabs from './src/components/Tabs';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -53,6 +54,7 @@ function ProfileScreen({ navigation }: any) {
           navigation.navigate('Second');
         }}
       />
+      <Tabs selectedTab={0} onTabChange={() => { }} />
       <ExamCard
         topic="National & International Current Events"
         paper="GS Paper- I"
@@ -189,8 +191,8 @@ function App(): React.JSX.Element {
 const styles = StyleSheet.create({
   sectionContainer: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    // justifyContent: 'center',
+    // alignItems: 'center',
   },
   sectionTitle: {
     fontSize: 24,
