@@ -1,14 +1,15 @@
-import { View } from "react-native";
-import LinearGradient from "react-native-linear-gradient";
-import { gradient } from "../../contants/colors";
+import { View } from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
+import { gradient } from '../../contants/colors';
 import { ReactNode } from 'react';
 
 interface WrapperContainerProps {
   children?: ReactNode;
   header?: ReactNode;
+  isPadding?: number
 }
 
-export const WrapperContainer = ({ children, header }: WrapperContainerProps) => {
+export const WrapperContainer = ({ children, header, isPadding = 24 }: WrapperContainerProps) => {
   return (
     <View style={{ flex: 1 }}>
       <LinearGradient
@@ -23,9 +24,9 @@ export const WrapperContainer = ({ children, header }: WrapperContainerProps) =>
           flex: 0.84,
           borderRadius: 12,
           backgroundColor: 'white',
-          top:-8,
+          top: -8,
           bottom: 0,
-          padding:24
+          padding: isPadding,
         }}>
         {children}
       </View>
