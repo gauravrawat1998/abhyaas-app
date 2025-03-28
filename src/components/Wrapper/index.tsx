@@ -12,16 +12,19 @@ interface WrapperContainerProps {
   isBack?: boolean;
   headertext?: String;
   headersubtext?: String;
+  isPadding?: number;
+  headingflex?:number;
 }
 
-export const WrapperContainer = ({ children, header, headertext, headersubtext,  isBack= true }: WrapperContainerProps) => {
+export const WrapperContainer = ({ children, header, headertext, headersubtext,  isBack= true,headingflex=0.16, isPadding = 24 }: WrapperContainerProps) => {
   const navigation = useNavigation()
   const insets = useSafeAreaInsets()
+  
   return (
     <View style={{ flex: 1 }}>
       <LinearGradient
         colors={gradient.header}
-        style={{ flex: 0.16 }}
+        style={{ flex: headingflex }}
         start={{ x: 1, y: 0 }}
         end={{ x: 1, y: 1 }}>
         <View style={{ flexDirection: 'row', alignItems:'center', paddingTop:insets.top}} >
@@ -40,9 +43,9 @@ export const WrapperContainer = ({ children, header, headertext, headersubtext, 
           flex: 0.84,
           borderRadius: 12,
           backgroundColor: 'white',
-          top:-8,
+          top: -8,
           bottom: 0,
-          padding:24
+          padding: isPadding,
         }}>
         {children}
       </View>

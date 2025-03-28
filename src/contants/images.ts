@@ -12,4 +12,8 @@ export default {
   exam_chip: require('../assets/exam_chip.png'),
   back: require('../assets/back.png'),
   cross: require('../assets/cross.png'),
+  menu: require('../assets/Menu.png'),
+  profile: require('../assets/profile.png'),
+  wallet: require('../assets/Wallet.png'),
+  notification: require('../assets/notification.png'),
 };
