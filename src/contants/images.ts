@@ -7,4 +7,5 @@ export default {
   exams: require('../assets/exams.png'),
   topics: require('../assets/topics.png'),
   subjects: require('../assets/subjects.png'),
+  exam_chip: require('../assets/exam_chip.png'),
 };
