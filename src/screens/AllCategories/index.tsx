@@ -8,7 +8,11 @@ const AllCategories = () => {
     return (
         <WrapperContainer isPadding={16}>
             <Text style={styles.heading}>Trending</Text>
-            <CategoryCard />
+            <View style={styles.row}>
+                {categoryData.trending.map((item, index) => (
+                    <CategoryCard key={item + index} item={item} />
+                ))}
+            </View>
         </WrapperContainer>
     );
 };
@@ -20,5 +24,9 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontWeight: '700',
         marginBottom: 20,
+    },
+    row: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
     },
 });
