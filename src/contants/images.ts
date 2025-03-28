@@ -9,4 +9,5 @@ export default {
   subjects: require('../assets/subjects.png'),
   splash_icon: require('../assets/splash_icon.png'),
   google_icon: require('../assets/google_icon.png'),
+  exam_chip: require('../assets/exam_chip.png'),
 };

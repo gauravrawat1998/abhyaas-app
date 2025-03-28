@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { Dimensions, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import { tabsData } from '../../contants/data';
 import BigChip from '../BigChip';
@@ -32,5 +32,8 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         marginTop: 20,
         paddingHorizontal: 13,
+        alignSelf: "flex-end",
+        marginBottom: 20,
+        width: Dimensions.get("screen").width
     },
 });
