@@ -3,21 +3,32 @@ import {View} from 'react-native';
 import HomeScreen from '../screens/Home';
 import ProfileScreen from '../screens/Profile';
 import DrawerNavigator from './drawer';
+import SplashScreen from '../screens/Splash';
+import LoginScreen from '../screens/Login';
+import VerificationScreen from '../screens/Verification';
 
 const AUTH_STACK = [{
-    key:'',
-    component:HomeScreen
-}]
-const STACK = [{
-    key:'HomeScreen',
+    key:'Login',
+    name:'Login',
+    component:LoginScreen
+},
+{
+  key:'Verify',
+  name:'Verify',
+  component:VerificationScreen
+},
+{    key:'HomeScreen',
+    name:'HomeScreen',
     component:HomeScreen
 },
 {
     key:'ProfileScreen',
+    name:'ProfileScreen',
     component:ProfileScreen
 },
 {
     key:'DrawerNavigator',
+    name:'DrawerNavigator',
     component:DrawerNavigator
 }]
 
@@ -26,9 +37,12 @@ const Navigator = () => {
   const Stack = createNativeStackNavigator();
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
-      <Stack.Screen name="Home" component={HomeScreen} />
-      <Stack.Screen name="Second" component={ProfileScreen} />
-      <Stack.Screen name="Drawer" component={DrawerNavigator} />
+      <Stack.Screen name="Splash" component={SplashScreen} />
+      {
+        AUTH_STACK.map((item, index) => (
+          <Stack.Screen key={item.key} name={item.name} component={item.component} />
+        ))
+      }
     </Stack.Navigator>
   );
 };

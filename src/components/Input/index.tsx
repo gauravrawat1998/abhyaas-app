@@ -27,7 +27,7 @@ const Input: React.FC<InputProps> = ({
     ...props
 }) => {
     return (
-        <View style={styles.container}>
+        <View >
             {label && <Text style={styles.label}>{label}</Text>}
             <View style={styles.inputContainer}>
                 {icon && <View style={styles.icon}>{icon}</View>}
@@ -47,9 +47,6 @@ const Input: React.FC<InputProps> = ({
 };
 
 const styles = StyleSheet.create({
-    container: {
-        marginHorizontal: 16
-    },
     label: {
         fontSize: 14,
         fontWeight: 'bold',

@@ -7,4 +7,6 @@ export default {
   exams: require('../assets/exams.png'),
   topics: require('../assets/topics.png'),
   subjects: require('../assets/subjects.png'),
+  splash_icon: require('../assets/splash_icon.png'),
+  google_icon: require('../assets/google_icon.png'),
 };

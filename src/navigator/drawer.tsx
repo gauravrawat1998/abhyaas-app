@@ -81,6 +81,7 @@ const DrawerNavigator = () => {
           borderRadius: 0,
           borderColor: '#E1E0E0',
         },
+        headerShown:false
       }}>
       {Data.map(item => (
         <MyDrawer.Screen

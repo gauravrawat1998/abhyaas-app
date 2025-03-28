@@ -8,3 +8,7 @@ export default {
   dark_blue: '#82AEC1',
   chip: '#0474a8',
 };
+export const gradient={
+  header:['#0D3A4E', '#0374A8', '#82AEC1'],
+  splash:['#FFFFFF', '#82AEC1', '#0374A8', '#0D3A4E']
+}
