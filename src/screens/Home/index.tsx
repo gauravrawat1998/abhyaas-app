@@ -30,7 +30,9 @@ function HomeScreen({ navigation }: any) {
           selectedTab={selectedTabIndex}
           onTabChange={index => setSelectedTabIndex(index)}
         />
-      }>
+      }
+      isBack
+      >
       <View style={styles.sectionContainer}>
         <FlatList
           horizontal
