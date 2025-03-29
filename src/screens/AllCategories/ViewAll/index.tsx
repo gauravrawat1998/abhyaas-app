@@ -1,13 +1,21 @@
 import { FlatList, StyleSheet, Text, View } from 'react-native';
-import React from 'react';
+import React, { useState } from 'react';
 import { WrapperContainer } from '../../../components/Wrapper';
 import CategoryStrip from '../../../components/Category/Strip';
+import ScreenHeader from '../../../components/ScreenHeader';
 
-const ViewAll = () => {
+const ViewAll = ({navigation, route}:any) => {
+    const {heading} = route?.params
     const renderStrip = ({ item, index }: any) => <CategoryStrip key={item} />;
-
+    const [searchText,setSearchText] = useState('')
     return (
-        <WrapperContainer isPadding={0}>
+        <WrapperContainer isPadding={0} header={<ScreenHeader 
+            headerText={heading}
+            navigation={navigation}
+            searchText={searchText}
+            isDrawer={false}
+            onTextChange={(text: string) => setSearchText(text)}
+        />}>
             <FlatList
                 data={new Array(20)}
                 renderItem={renderStrip}

@@ -1,12 +1,32 @@
-import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import React from 'react';
+import {
+    ScrollView,
+    StyleSheet,
+    Text,
+    TouchableOpacity,
+    View,
+} from 'react-native';
+import React, { useState } from 'react';
 import { WrapperContainer } from '../../components/Wrapper';
 import { categoryData } from '../../contants/data';
 import CategoryCard from '../../components/Category/Card';
+import ScreenHeader from '../../components/ScreenHeader';
 
 const AllCategories = ({ navigation }: any) => {
+    const [searchText, setSearchText] = useState('');
+
     return (
-        <WrapperContainer isPadding={0}>
+        <WrapperContainer
+            isPadding={0}
+            isBack={false}
+            header={
+                <ScreenHeader
+                    headerText='All Categories'
+                    navigation={navigation}
+                    searchText={searchText}
+                    isDrawer={true}
+                    onTextChange={(text: string) => setSearchText(text)}
+                />
+            }>
             <ScrollView
                 showsVerticalScrollIndicator={false}
                 contentContainerStyle={{ paddingHorizontal: 16 }}>
@@ -27,10 +47,10 @@ const AllCategories = ({ navigation }: any) => {
                     </View>
                 </View>
                 <View style={styles.container}>
-                    <View style={[styles.row, styles.margin, { alignItems: "center" }]}>
+                    <View style={[styles.row, styles.margin, { alignItems: 'center' }]}>
                         <Text style={[styles.heading]}>Explore By Exams</Text>
-                        <TouchableOpacity onPress={() => navigation.navigate("ViewAll")}>
-                            <Text style={styles.viewAll}>{"View all >"}</Text>
+                        <TouchableOpacity onPress={() => navigation.navigate('ViewAll',{heading:'Exams'})}>
+                            <Text style={styles.viewAll}>{'View all >'}</Text>
                         </TouchableOpacity>
                     </View>
                     <View style={styles.row}>
@@ -40,10 +60,10 @@ const AllCategories = ({ navigation }: any) => {
                     </View>
                 </View>
                 <View style={styles.container}>
-                    <View style={[styles.row, styles.margin, { alignItems: "center" }]}>
+                    <View style={[styles.row, styles.margin, { alignItems: 'center' }]}>
                         <Text style={styles.heading}>Explore By General Subjects</Text>
-                        <TouchableOpacity>
-                            <Text style={styles.viewAll}>{"View all >"}</Text>
+                        <TouchableOpacity onPress={() => navigation.navigate('ViewAll',{heading:'Subjects'})}>
+                            <Text style={styles.viewAll}>{'View all >'}</Text>
                         </TouchableOpacity>
                     </View>
                     <View style={styles.row}>
@@ -53,10 +73,10 @@ const AllCategories = ({ navigation }: any) => {
                     </View>
                 </View>
                 <View style={styles.container}>
-                    <View style={[styles.row, styles.margin, { alignItems: "center" }]}>
+                    <View style={[styles.row, styles.margin, { alignItems: 'center' }]}>
                         <Text style={styles.heading}>Explore By Topics</Text>
-                        <TouchableOpacity>
-                            <Text style={styles.viewAll}>{"View all >"}</Text>
+                        <TouchableOpacity onPress={() => navigation.navigate('ViewAll',{heading:'Topics'})}>
+                            <Text style={styles.viewAll}>{'View all >'}</Text>
                         </TouchableOpacity>
                     </View>
                     <View style={styles.row}>
@@ -89,5 +109,5 @@ const styles = StyleSheet.create({
     },
     margin: {
         marginBottom: 15,
-    }
+    },
 });

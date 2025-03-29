@@ -1,4 +1,12 @@
-import { StyleSheet, Text, View,Image, FlatList, SectionList, Pressable } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  FlatList,
+  SectionList,
+  Pressable,
+} from 'react-native';
 import { WrapperContainer } from '../../components/Wrapper';
 import Tabs from '../../components/Tabs';
 import { useState } from 'react';
@@ -45,15 +53,14 @@ function HomeScreen({ navigation }: any) {
             <Image source={images.menu} style={styles.header_icon} />
           </Pressable>
           </View>
-        </View> 
+        </View>
         <Tabs
           selectedTab={selectedTabIndex}
           onTabChange={index => setSelectedTabIndex(index)}
-          />
-          </View>
+        />
+        </View>
       }
-      isBack={false}
-      >
+      isBack={false}>
       <View style={styles.sectionContainer}>
         <View>
           <FlatList

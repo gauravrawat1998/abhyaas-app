@@ -62,7 +62,7 @@ const DrawerNavigator = () => {
       {Data.map(item => (
         <MyDrawer.Screen
           key={item?.key}
-          name={item?.name}
+          name={item?.label}
           options={{ drawerLabel: item?.label }}
           component={item?.component}
         />
