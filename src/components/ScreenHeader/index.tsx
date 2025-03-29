@@ -47,6 +47,7 @@ export default ScreenHeader;
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
+        alignItems:'center',
         margin: 12,
         flex:1,
         overflow:'hidden'

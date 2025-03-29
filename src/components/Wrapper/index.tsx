@@ -1,4 +1,4 @@
-import { Image, Pressable, Text, View } from 'react-native';
+import { Image, Platform, Pressable, Text, View } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import colors, { gradient } from '../../contants/colors';
 import { ReactNode } from 'react';
@@ -22,7 +22,7 @@ export const WrapperContainer = ({
   headertext,
   headersubtext,
   isBack = true,
-  headingflex = 0.16,
+  headingflex = Platform.OS == 'ios' ? 0.16 : 0.13,
   isPadding = 24,
 }: WrapperContainerProps) => {
   const navigation = useNavigation();
@@ -39,7 +39,7 @@ export const WrapperContainer = ({
           style={{
             flexDirection: 'row',
             alignItems: 'center',
-            paddingTop: insets.top,
+            paddingTop: Platform.OS == 'ios' ? insets.top : insets.top+12 ,
             paddingHorizontal:insets.left
           }}>
           {isBack && (

@@ -6,6 +6,7 @@ import {
   FlatList,
   SectionList,
   Pressable,
+  Platform,
 } from 'react-native';
 import { WrapperContainer } from '../../components/Wrapper';
 import Tabs from '../../components/Tabs';
@@ -35,7 +36,7 @@ function HomeScreen({ navigation }: any) {
   return (
     <WrapperContainer
       isPadding={0}
-      headingflex={0.24}
+      headingflex={Platform.OS == 'ios' ? 0.24:0.19}
       header={
         <View>
          <View style={styles.header_cont} >

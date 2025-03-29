@@ -74,23 +74,28 @@ export default DrawerNavigator;
 
 const styles = StyleSheet.create({
   profile_text_cont:{
-   backgroundColor: colors.white,
-   height: 64,
-   width: 64,
-   borderRadius: 32,
-   alignItems: 'center',
-   justifyContent: 'center',
+  //  backgroundColor: colors.white,
+  //  height: 64,
+  //  width: 64,
+  //  borderRadius: 32,
+  alignItems: 'center',
+  justifyContent: 'center',
  },
  profile_icon:{ 
    color: '#0D3A4E', 
    fontWeight: '700', 
-   fontSize: 56 
+   fontSize: 56 ,
+   lineHeight: 64,
+   width: 64,
+   backgroundColor: colors.white,
+   borderRadius: 32,
+   textAlign:'center'
  }, 
  profile:{
    color: colors.white,
    fontWeight: '800',
    lineHeight: 18,
-   marginHorizontal: 12,
+   marginHorizontal: 12
  },
  drawer_profile_cont:{
    backgroundColor: '#0D3A4E',
