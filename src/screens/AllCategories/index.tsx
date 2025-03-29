@@ -4,7 +4,7 @@ import { WrapperContainer } from '../../components/Wrapper';
 import { categoryData } from '../../contants/data';
 import CategoryCard from '../../components/Category/Card';
 
-const AllCategories = () => {
+const AllCategories = ({ navigation }: any) => {
     return (
         <WrapperContainer isPadding={0}>
             <ScrollView
@@ -29,7 +29,7 @@ const AllCategories = () => {
                 <View style={styles.container}>
                     <View style={[styles.row, styles.margin, { alignItems: "center" }]}>
                         <Text style={[styles.heading]}>Explore By Exams</Text>
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={() => navigation.navigate("ViewAll")}>
                             <Text style={styles.viewAll}>{"View all >"}</Text>
                         </TouchableOpacity>
                     </View>

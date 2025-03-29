@@ -35,6 +35,7 @@ export default CategoryCard;
 const styles = StyleSheet.create({
     container: {
         width: Dimensions.get('screen').width / 3 - 24,
+        height: 100,
         shadowColor: '#000',
         shadowOffset: {
             width: 0,
