@@ -2,11 +2,12 @@ import {
   createDrawerNavigator,
   DrawerItemList,
 } from '@react-navigation/drawer';
-import { ScrollView, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import ProfileScreen from '../screens/Profile';
 import { BottomTabsStack } from './bottomtab';
 import AllCategories from '../screens/AllCategories';
+import colors from '../contants/colors';
 
 const Data = [
   { key: '0', name: 'Page0', component: BottomTabsStack, label: 'Home' },
@@ -26,36 +27,17 @@ const Data = [
 const CustomDrawer = (props: any) => {
   const insets = useSafeAreaInsets();
   return (
-    <View style={{ backgroundColor: '#white', flex: 1 }}>
+    <View style={styles.cont}>
       <View
-        style={{
-          backgroundColor: '#0D3A4E',
-          flex: 0.15,
-          paddingTop: insets.top - 12,
-          paddingHorizontal: 12,
-          flexDirection: 'row',
-          alignItems: 'center',
-        }}>
+        style={{...styles.drawer_profile_cont, paddingTop: insets.top - 12}}>
         <View
-          style={{
-            backgroundColor: 'white',
-            height: 64,
-            width: 64,
-            borderRadius: 32,
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
-          <Text style={{ color: '#0D3A4E', fontWeight: '700', fontSize: 56 }}>
+          style={styles.profile_text_cont}>
+          <Text style={styles.profile_icon}>
             A
           </Text>
         </View>
         <Text
-          style={{
-            color: 'white',
-            fontWeight: '800',
-            lineHeight: 18,
-            marginHorizontal: 12,
-          }}>{`Genius ABC\nLevel: Intermediate XI\nMy Balance: 250.55`}</Text>
+          style={styles.profile}>{`Genius ABC\nLevel: Intermediate XI\nMy Balance: 250.55`}</Text>
       </View>
       <View style={{ flex: 0.85 }}>
         <ScrollView>
@@ -72,17 +54,9 @@ const DrawerNavigator = () => {
     <MyDrawer.Navigator
       drawerContent={(props: any) => <CustomDrawer {...props} />}
       screenOptions={{
-        drawerLabelStyle: {
-          fontSize: 20,
-          color: '#000000',
-          fontWeight: '600',
-        },
-        drawerActiveTintColor: 'white',
-        drawerItemStyle: {
-          borderBottomWidth: 1,
-          borderRadius: 0,
-          borderColor: '#E1E0E0',
-        },
+        drawerLabelStyle: styles.drawerLabel ,
+        drawerActiveTintColor: colors.white,
+        drawerItemStyle: styles.drawerItem ,
         headerShown: false
       }}>
       {Data.map(item => (
@@ -97,3 +71,46 @@ const DrawerNavigator = () => {
   );
 };
 export default DrawerNavigator;
+
+const styles = StyleSheet.create({
+  profile_text_cont:{
+   backgroundColor: colors.white,
+   height: 64,
+   width: 64,
+   borderRadius: 32,
+   alignItems: 'center',
+   justifyContent: 'center',
+ },
+ profile_icon:{ 
+   color: '#0D3A4E', 
+   fontWeight: '700', 
+   fontSize: 56 
+ }, 
+ profile:{
+   color: colors.white,
+   fontWeight: '800',
+   lineHeight: 18,
+   marginHorizontal: 12,
+ },
+ drawer_profile_cont:{
+   backgroundColor: '#0D3A4E',
+   flex: 0.15,
+   paddingHorizontal: 12,
+   flexDirection: 'row',
+   alignItems: 'center',
+ },
+ cont:{ 
+   backgroundColor: colors.white, 
+   flex: 1 
+ },
+ drawerLabel:{
+   fontSize: 20,
+   color: colors.black,
+   fontWeight: '600',
+ },
+ drawerItem:{
+   borderBottomWidth: 1,
+   borderRadius: 0,
+   borderColor: '#E1E0E0',
+ }
+ })

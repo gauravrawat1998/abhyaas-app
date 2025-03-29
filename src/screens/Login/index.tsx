@@ -86,16 +86,16 @@ btn:{
     marginVertical:20
 },
 input:{
-    backgroundColor:'#E5F3FD', 
+    backgroundColor:colors.E5F3FD, 
     borderBottomWidth:1, 
-    borderColor:'#0D3A4E', 
+    borderColor:colors.D3A4E, 
     marginTop:18, 
     marginBottom:8, 
     padding:14
 },
 input_subtext:{
     fontSize:9, 
-    color:'#606060'
+    color:colors.grey
 },
 modal_heading:{ 
     borderBottomWidth:0.5, 
@@ -113,19 +113,19 @@ refer_code:{
     fontWeight:'800'
 },
 refer_container:{
-    backgroundColor:'#D9D9D9',
+    backgroundColor:colors.D9D9D9,
     borderRadius:4, 
     alignSelf:'center', 
     padding:12
 },
 line:{ 
     borderWidth: 0.5, 
-    borderColor: '#E1E0E0', 
+    borderColor: colors.E1E0E0, 
     width: '35%', 
     height: 1
  },
  or_text:{ 
-    backgroundColor: '#F9F7F7', 
+    backgroundColor: colors.F9F7F7, 
     padding: 10, 
     borderRadius: 24, 
     marginHorizontal: 18
@@ -145,7 +145,7 @@ google_btn:{
     borderRadius: 12 
 },
 google_text:{ 
-    color: '#A6A6A6', 
+    color: colors.border, 
     fontSize: 15 
 },
 google_icon:{ 

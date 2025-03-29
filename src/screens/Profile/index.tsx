@@ -1,7 +1,8 @@
 import { StyleSheet, View } from 'react-native';
+import { WrapperContainer } from '../../components/Wrapper';
 
 function ProfileScreen({ navigation }: any) {
-  return <View style={styles.sectionContainer}></View>;
+  return <WrapperContainer isBack={false}/>
 }
 export default ProfileScreen;
 const styles = StyleSheet.create({

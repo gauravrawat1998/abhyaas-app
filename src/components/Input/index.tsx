@@ -68,12 +68,13 @@ const styles = StyleSheet.create({
         paddingVertical: 15,
         paddingHorizontal: 10,
         fontSize: 15,
+        color:colors.black
     },
     errorInput: {
-        borderColor: 'red',
+        borderColor: colors.red,
     },
     errorText: {
-        color: 'red',
+        color: colors.red,
         fontSize: 12,
         marginTop: 4,
     },
