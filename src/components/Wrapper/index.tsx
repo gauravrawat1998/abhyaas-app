@@ -1,10 +1,10 @@
-import { Image, Pressable, Text, View } from "react-native";
-import LinearGradient from "react-native-linear-gradient";
-import colors, { gradient } from "../../contants/colors";
+import { Image, Pressable, Text, View } from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
+import colors, { gradient } from '../../contants/colors';
 import { ReactNode } from 'react';
-import { useNavigation } from "@react-navigation/native";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
-import images from "../../contants/images";
+import { useNavigation } from '@react-navigation/native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import images from '../../contants/images';
 
 interface WrapperContainerProps {
   children?: ReactNode;
@@ -13,13 +13,21 @@ interface WrapperContainerProps {
   headertext?: String;
   headersubtext?: String;
   isPadding?: number;
-  headingflex?:number;
+  headingflex?: number;
 }
 
-export const WrapperContainer = ({ children, header, headertext, headersubtext,  isBack= true,headingflex=0.16, isPadding = 24 }: WrapperContainerProps) => {
-  const navigation = useNavigation()
-  const insets = useSafeAreaInsets()
-  
+export const WrapperContainer = ({
+  children,
+  header,
+  headertext,
+  headersubtext,
+  isBack = true,
+  headingflex = 0.16,
+  isPadding = 24,
+}: WrapperContainerProps) => {
+  const navigation = useNavigation();
+  const insets = useSafeAreaInsets();
+
   return (
     <View style={{ flex: 1 }}>
       <LinearGradient
@@ -27,15 +35,39 @@ export const WrapperContainer = ({ children, header, headertext, headersubtext, 
         style={{ flex: headingflex }}
         start={{ x: 1, y: 0 }}
         end={{ x: 1, y: 1 }}>
-        <View style={{ flexDirection: 'row', alignItems:'center', paddingTop:insets.top}} >
-        {isBack && <Pressable onPress={()=>{navigation.goBack()}} style={{ paddingTop:22, paddingHorizontal:16, position:'absolute', bottom:0}}>
-        <Image source={images.back} style={{height:28, width:28}} />
-        </Pressable>}
-        {header ?  header : 
-        <View style={{ flex:1, justifyContent:'center', alignItems:'center'}}>
-        <Text style={{fontSize:32,color:colors.white}}>{headertext}</Text>
-        {headersubtext &&<Text style={{color:colors.white}}>{headersubtext}</Text>}
-    </View>}
+        <View
+          style={{
+            flexDirection: 'row',
+            alignItems: 'center',
+            paddingTop: insets.top,
+          }}>
+          {isBack && (
+            <Pressable
+              onPress={() => {
+                navigation.goBack();
+              }}
+              style={{
+                paddingTop: 22,
+                paddingHorizontal: 16,
+                position: 'absolute',
+                bottom: 0,
+              }}>
+              <Image source={images.back} style={{ height: 28, width: 28 }} />
+            </Pressable>
+          )}
+          {header ? (
+            header
+          ) : (
+            <View
+              style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+              <Text style={{ fontSize: 32, color: colors.white }}>
+                {headertext}
+              </Text>
+              {headersubtext && (
+                <Text style={{ color: colors.white }}>{headersubtext}</Text>
+              )}
+            </View>
+          )}
         </View>
       </LinearGradient>
       <View

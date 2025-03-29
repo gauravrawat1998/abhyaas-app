@@ -1,4 +1,12 @@
-import { StyleSheet, Text, View,Image, FlatList, SectionList, Pressable } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  FlatList,
+  SectionList,
+  Pressable,
+} from 'react-native';
 import { WrapperContainer } from '../../components/Wrapper';
 import Tabs from '../../components/Tabs';
 import { useState } from 'react';
@@ -30,30 +38,40 @@ function HomeScreen({ navigation }: any) {
       headingflex={0.24}
       header={
         <View>
-         <View style={{flexDirection:'row', justifyContent:'space-between', paddingHorizontal:12, }} >
-          <Pressable>
-            <Image source={images.profile} style={{height:25, width:25}} />
-          </Pressable>
-          <View style={{flexDirection:'row',alignItems:'center'}} >
-          <Pressable  >
-            <Image source={images.notification} style={{height:25, width:25}} />
-          </Pressable>
-          <Pressable style={{paddingHorizontal:12}}>
-            <Image source={images.wallet} style={{height:25, width:25}} />
-          </Pressable>
-          <Pressable onPress={()=>{navigation.openDrawer()}} >
-            <Image source={images.menu} style={{height:25, width:25}} />
-          </Pressable>
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              paddingHorizontal: 12,
+            }}>
+            <Pressable>
+              <Image source={images.profile} style={{ height: 25, width: 25 }} />
+            </Pressable>
+            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+              <Pressable>
+                <Image
+                  source={images.notification}
+                  style={{ height: 25, width: 25 }}
+                />
+              </Pressable>
+              <Pressable style={{ paddingHorizontal: 12 }}>
+                <Image source={images.wallet} style={{ height: 25, width: 25 }} />
+              </Pressable>
+              <Pressable
+                onPress={() => {
+                  navigation.openDrawer();
+                }}>
+                <Image source={images.menu} style={{ height: 25, width: 25 }} />
+              </Pressable>
+            </View>
           </View>
-        </View> 
-        <Tabs
-          selectedTab={selectedTabIndex}
-          onTabChange={index => setSelectedTabIndex(index)}
+          <Tabs
+            selectedTab={selectedTabIndex}
+            onTabChange={index => setSelectedTabIndex(index)}
           />
-          </View>
+        </View>
       }
-      isBack={false}
-      >
+      isBack={false}>
       <View style={styles.sectionContainer}>
         <View>
           <FlatList
