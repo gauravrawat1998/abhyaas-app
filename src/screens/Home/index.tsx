@@ -41,7 +41,7 @@ function HomeScreen({ navigation }: any) {
           <Pressable style={{paddingHorizontal:12}}>
             <Image source={images.wallet} style={{height:25, width:25}} />
           </Pressable>
-          <Pressable>
+          <Pressable onPress={()=>{navigation.openDrawer()}} >
             <Image source={images.menu} style={{height:25, width:25}} />
           </Pressable>
           </View>

@@ -9,8 +9,9 @@ import { BottomTabsStack } from './bottomtab';
 import AllCategories from '../screens/AllCategories';
 
 const Data = [
-  { key: '1', name: 'Page1', component: BottomTabsStack, label: 'All Categories' },
-  { key: '2', name: 'Page2', component: AllCategories, label: 'My Profile' },
+  { key: '0', name: 'Page0', component: BottomTabsStack, label: 'Home' },
+  { key: '1', name: 'Page1', component: AllCategories, label: 'All Categories' },
+  { key: '2', name: 'Page2', component: ProfileScreen, label: 'My Profile' },
   { key: '3', name: 'Page3', component: ProfileScreen, label: 'Learn With Us' },
   { key: '4', name: 'Page4', component: ProfileScreen, label: 'Settings' },
   { key: '5', name: 'Page5', component: ProfileScreen, label: 'Help & Support' },
