@@ -206,6 +206,7 @@ function ProfileScreen({navigation, route}: any) {
   );
 }
 export default ProfileScreen;
+
 const styles = StyleSheet.create({
   flex: {
     flex: 1,

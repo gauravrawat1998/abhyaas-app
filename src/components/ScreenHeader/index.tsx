@@ -48,10 +48,11 @@ export default ScreenHeader;
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
-        alignItems:'center',
+        alignItems: 'center',
         margin: 12,
-        flex:1,
-        overflow:'hidden'
+        flex: 1,
+        overflow: 'hidden',
+        justifyContent: "space-between"
     },
     heading: {
         fontSize: 20,
@@ -59,22 +60,22 @@ const styles = StyleSheet.create({
         color: colors.white,
     },
     inputContainer: {
-       flex: 1, 
+        flex: 1,
         borderRadius: 50,
         backgroundColor: colors.white,
         marginHorizontal: 10,
         paddingHorizontal: 10,
-        flexDirection: "row",
-        alignItems: "center"
+        flexDirection: 'row',
+        alignItems: 'center',
     },
     input: {
         fontSize: 12,
         flex: 1,
-        fontWeight: "500"
+        fontWeight: '500',
     },
     searchIcon: {
         height: 14,
         width: 14,
-        marginRight: 5
-    }
+        marginRight: 5,
+    },
 });

@@ -39,26 +39,26 @@ function HomeScreen({ navigation }: any) {
       headingflex={0.22}
       header={
         <View>
-         <View style={styles.header_cont} >
-          <Pressable>
-            <Image source={images.profile} style={styles.header_icon} />
-          </Pressable>
-          <View style={{flexDirection:'row',alignItems:'center'}} >
-          <Pressable  >
-            <Image source={images.notification} style={styles.header_icon}  />
-          </Pressable>
-          <Pressable style={{paddingHorizontal:12}}>
-            <Image source={images.wallet} style={styles.header_icon}  />
-          </Pressable>
-          <Pressable onPress={()=>{navigation.openDrawer()}} >
-            <Image source={images.menu} style={styles.header_icon} />
-          </Pressable>
+          <View style={styles.header_cont} >
+            <Pressable>
+              <Image source={images.profile} style={styles.header_icon} />
+            </Pressable>
+            <View style={{ flexDirection: 'row', alignItems: 'center' }} >
+              <Pressable  >
+                <Image source={images.notification} style={styles.header_icon} />
+              </Pressable>
+              <Pressable style={{ paddingHorizontal: 12 }}>
+                <Image source={images.wallet} style={styles.header_icon} />
+              </Pressable>
+              <Pressable onPress={() => { navigation.openDrawer() }} >
+                <Image source={images.menu} style={styles.header_icon} />
+              </Pressable>
+            </View>
           </View>
-        </View>
-        <Tabs
-          selectedTab={selectedTabIndex}
-          onTabChange={index => setSelectedTabIndex(index)}
-        />
+          <Tabs
+            selectedTab={selectedTabIndex}
+            onTabChange={index => setSelectedTabIndex(index)}
+          />
         </View>
       }
       isBack={false}>
@@ -84,6 +84,7 @@ function HomeScreen({ navigation }: any) {
                 topic={item.topic}
                 paper={item.paper}
                 mode={item.mode}
+                onPress={() => navigation.navigate("Question")}
               />
             )}
           />
@@ -117,13 +118,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     marginBottom: 20,
   },
-  header_icon:{
-    height:25, 
-    width:25
+  header_icon: {
+    height: 25,
+    width: 25
   },
-  header_cont:{
-    flexDirection:'row', 
-    justifyContent:'space-between', 
-    paddingHorizontal:12
+  header_cont: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: 12
   }
 });
