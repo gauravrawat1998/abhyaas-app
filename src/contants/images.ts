@@ -19,4 +19,5 @@ export default {
   check: require('../assets/check.png'),
   arrowRight: require('../assets/arrow-right.png'),
   logout: require('../assets/logout.png'),
+  timer: require('../assets/timer.png'),
 };

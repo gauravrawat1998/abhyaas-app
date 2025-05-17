@@ -17,6 +17,8 @@ export default {
   purple: '#270898',
   C1E5F5: '#C1E5F5',
   I86B91: '#186B91',
+  F3F3F3: '#F3F3F3',
+  F0FAFF: '#F0FAFF',
 };
 export const gradient = {
   header: ['#0D3A4E', '#0374A8', '#82AEC1'],

@@ -8,13 +8,14 @@ interface ExamCardProps {
     topic: string;
     paper: string;
     mode: string;
+    onPress?: () => {}
 }
 
 const ExamCard = (props: ExamCardProps) => {
-    const { topic, paper, mode } = props;
+    const { topic, paper, mode, onPress } = props;
 
     return (
-        <TouchableOpacity style={styles.cardContainer} activeOpacity={0.5}>
+        <TouchableOpacity style={styles.cardContainer} activeOpacity={0.5} onPress={onPress}>
             <View style={styles.cardHeader}>
                 <View style={styles.cardHeaderLeft}>
                     <View style={styles.topicContainer}>

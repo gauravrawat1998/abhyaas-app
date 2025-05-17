@@ -8,6 +8,7 @@ import LoginScreen from '../screens/Login';
 import VerificationScreen from '../screens/Verification';
 import ViewAll from '../screens/AllCategories/ViewAll';
 import EditProfileScreen from '../screens/Profile/EditProfile';
+import Question from '../screens/Question';
 
 const AUTH_STACK = [
   {
@@ -40,6 +41,11 @@ const AUTH_STACK = [
     key: 'EditProfileScreen',
     name: 'EditProfileScreen',
     component: EditProfileScreen,
+  },
+  {
+    key: 'Question',
+    name: 'Question',
+    component: Question,
   },
 ];
 
