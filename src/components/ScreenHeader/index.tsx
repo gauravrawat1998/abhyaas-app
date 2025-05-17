@@ -12,32 +12,35 @@ import colors from '../../contants/colors';
 
 interface ScreenHeaderProps {
     navigation: any;
-    searchText: string;
-    onTextChange: (text: string) => void;
+    searchText?: string;
+    onTextChange?: (text: string) => void;
     headerText: string;
-    isDrawer:boolean
+    isDrawer: boolean;
 }
 
 const ScreenHeader = (props: ScreenHeaderProps) => {
-    const { navigation, headerText, isDrawer } = props;
+    const { navigation, headerText, isDrawer, searchText } = props;
     return (
         <View style={styles.container}>
             <Text style={styles.heading}>{headerText}</Text>
-            <View style={styles.inputContainer}>
-                <Image source={images.bottom_search} style={styles.searchIcon} />
-                <TextInput
-                    placeholder="Search"
-                    style={styles.input}
-                    placeholderTextColor={colors.border}
-                />
-            </View>
-            {isDrawer &&
-            <Pressable
-                onPress={() => {
-                    navigation.openDrawer();
-                }}>
-                <Image source={images.menu} style={{ height: 25, width: 25 }} />
-            </Pressable>}
+            {searchText ? (
+                <View style={styles.inputContainer}>
+                    <Image source={images.bottom_search} style={styles.searchIcon} />
+                    <TextInput
+                        placeholder="Search"
+                        style={styles.input}
+                        placeholderTextColor={colors.border}
+                    />
+                </View>
+            ) : null}
+            {isDrawer && (
+                <Pressable
+                    onPress={() => {
+                        navigation.openDrawer();
+                    }}>
+                    <Image source={images.menu} style={{ height: 25, width: 25 }} />
+                </Pressable>
+            )}
         </View>
     );
 };
@@ -47,10 +50,11 @@ export default ScreenHeader;
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
-        alignItems:'center',
+        alignItems: 'center',
         margin: 12,
-        flex:1,
-        overflow:'hidden'
+        flex: 1,
+        overflow: 'hidden',
+        justifyContent: "space-between"
     },
     heading: {
         fontSize: 20,
@@ -58,22 +62,22 @@ const styles = StyleSheet.create({
         color: colors.white,
     },
     inputContainer: {
-       flex: 1, 
+        flex: 1,
         borderRadius: 50,
         backgroundColor: colors.white,
         marginHorizontal: 10,
         paddingHorizontal: 10,
-        flexDirection: "row",
-        alignItems: "center"
+        flexDirection: 'row',
+        alignItems: 'center',
     },
     input: {
         fontSize: 12,
         flex: 1,
-        fontWeight: "500"
+        fontWeight: '500',
     },
     searchIcon: {
         height: 14,
         width: 14,
-        marginRight: 5
-    }
+        marginRight: 5,
+    },
 });

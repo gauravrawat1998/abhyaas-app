@@ -16,4 +16,5 @@ export default {
   profile: require('../assets/profile.png'),
   wallet: require('../assets/Wallet.png'),
   notification: require('../assets/notification.png'),
+  check: require('../assets/check.png'),
 };

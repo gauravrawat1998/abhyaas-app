@@ -39,8 +39,8 @@ export const WrapperContainer = ({
           style={{
             flexDirection: 'row',
             alignItems: 'center',
-            paddingTop: Platform.OS == 'ios' ? insets.top : insets.top+12 ,
-            paddingHorizontal:insets.left
+            paddingTop: Platform.OS == 'ios' ? insets.top : insets.top + 12,
+            paddingHorizontal: insets.left
           }}>
           {isBack && (
             <Pressable
@@ -49,8 +49,8 @@ export const WrapperContainer = ({
               }}
               style={{
                 padding: 16,
-                height:'100%',
-                width:'10%'
+                height: '100%',
+                width: '10%'
               }}>
               <Image source={images.back} style={{ height: 28, width: 28 }} />
             </Pressable>
@@ -59,7 +59,7 @@ export const WrapperContainer = ({
             header
           ) : (
             <View
-              style={{ flex: 1,justifyContent: 'center', alignItems: 'center' }}>
+              style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
               <Text style={{ fontSize: 32, color: colors.white }}>
                 {headertext}
               </Text>
