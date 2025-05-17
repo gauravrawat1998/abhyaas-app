@@ -287,7 +287,7 @@ const styles = StyleSheet.create({
     height: 18,
   },
   editCta: {
-    color: colors.green,
+    color: colors.I86B91,
     fontWeight: '700',
     fontSize: 20,
   },
