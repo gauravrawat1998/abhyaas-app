@@ -22,6 +22,7 @@ const AllCategories = ({ navigation }: any) => {
                 <ScreenHeader
                     headerText='All Categories'
                     navigation={navigation}
+                    isSearch={true}
                     searchText={searchText}
                     isDrawer={true}
                     onTextChange={(text: string) => setSearchText(text)}

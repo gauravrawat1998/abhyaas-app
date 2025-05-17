@@ -7,6 +7,7 @@ import SplashScreen from '../screens/Splash';
 import LoginScreen from '../screens/Login';
 import VerificationScreen from '../screens/Verification';
 import ViewAll from '../screens/AllCategories/ViewAll';
+import PerformanceScreen from '../screens/Profile/Performance';
 
 const AUTH_STACK = [
   {
@@ -34,6 +35,11 @@ const AUTH_STACK = [
     key: 'ViewAll',
     name: 'ViewAll',
     component: ViewAll,
+  },
+  {
+    key: 'Performance',
+    name: 'Performance',
+    component: PerformanceScreen,
   },
 ];
 

@@ -12,25 +12,26 @@ import colors from '../../contants/colors';
 
 interface ScreenHeaderProps {
     navigation: any;
-    searchText: string;
-    onTextChange: (text: string) => void;
+    searchText?: string;
+    onTextChange?: (text: string) => void;
     headerText: string;
-    isDrawer:boolean
+    isDrawer:boolean;
+    isSearch?:boolean
 }
 
 const ScreenHeader = (props: ScreenHeaderProps) => {
-    const { navigation, headerText, isDrawer } = props;
+    const { navigation, headerText, isDrawer, isSearch } = props;
     return (
         <View style={styles.container}>
             <Text style={styles.heading}>{headerText}</Text>
-            <View style={styles.inputContainer}>
+            {isSearch ? <View style={styles.inputContainer}>
                 <Image source={images.bottom_search} style={styles.searchIcon} />
                 <TextInput
                     placeholder="Search"
                     style={styles.input}
                     placeholderTextColor={colors.border}
                 />
-            </View>
+            </View>:<View style={{flex:1}} />}
             {isDrawer &&
             <Pressable
                 onPress={() => {

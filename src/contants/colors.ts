@@ -14,7 +14,15 @@ export default {
   D9D9D9:'#D9D9D9',
   F9F7F7:'#F9F7F7',
   E1E0E0:'#E1E0E0',
-  purple:'#270898'
+  purple:'#270898',
+  profile_blue:'#83CBEB',
+  profile_darkblue:'#022332',
+  profile_green:'#196B24',
+  profile_green_background:'#DCFFDB',
+  profile_blue_background:'#92DBFB59',
+  performance_brown:'#AC6701',
+  blue_background:'#0374A859',
+  dark_green:'#0D3A4EF2'
 };
 export const gradient = {
   header: ['#0D3A4E', '#0374A8', '#82AEC1'],

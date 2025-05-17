@@ -36,7 +36,7 @@ function HomeScreen({ navigation }: any) {
   return (
     <WrapperContainer
       isPadding={0}
-      headingflex={Platform.OS == 'ios' ? 0.24:0.19}
+      headingflex={0.22}
       header={
         <View>
          <View style={styles.header_cont} >
