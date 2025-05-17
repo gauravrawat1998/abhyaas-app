@@ -17,4 +17,6 @@ export default {
   wallet: require('../assets/Wallet.png'),
   notification: require('../assets/notification.png'),
   check: require('../assets/check.png'),
+  arrowRight: require('../assets/arrow-right.png'),
+  logout: require('../assets/logout.png'),
 };

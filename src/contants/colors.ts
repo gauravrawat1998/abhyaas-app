@@ -9,12 +9,14 @@ export default {
   chip: '#0474a8',
   background: '#FBFBFB',
   border: '#A6A6A6',
-  E5F3FD:'#E5F3FD',
-  D3A4E:'#0D3A4E',
-  D9D9D9:'#D9D9D9',
-  F9F7F7:'#F9F7F7',
-  E1E0E0:'#E1E0E0',
-  purple:'#270898'
+  E5F3FD: '#E5F3FD',
+  D3A4E: '#0D3A4E',
+  D9D9D9: '#D9D9D9',
+  F9F7F7: '#F9F7F7',
+  E1E0E0: '#E1E0E0',
+  purple: '#270898',
+  C1E5F5: '#C1E5F5',
+  I86B91: '#186B91',
 };
 export const gradient = {
   header: ['#0D3A4E', '#0374A8', '#82AEC1'],
