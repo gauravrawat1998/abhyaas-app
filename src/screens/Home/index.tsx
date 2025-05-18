@@ -84,7 +84,9 @@ function HomeScreen({ navigation }: any) {
                 topic={item.topic}
                 paper={item.paper}
                 mode={item.mode}
-                onPress={() => navigation.navigate("Question")}
+                onPress={() => navigation.navigate("TakeTest", {
+                  paper: item.paper
+                })}
               />
             )}
           />

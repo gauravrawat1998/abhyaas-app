@@ -49,6 +49,7 @@ export const WrapperContainer = ({
               }}
               style={{
                 padding: 16,
+                paddingVertical: 25,
                 height: '100%',
                 width: '10%'
               }}>

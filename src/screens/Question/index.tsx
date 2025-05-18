@@ -57,7 +57,8 @@ const Question = ({ navigation }: any) => {
         if (questionData[currentQuestionIndex + 1]) {
             setCurrentQuestionIndex(currentQuestionIndex + 1);
         } else {
-            navigation.goBack();
+            navigation.pop();
+            navigation.pop();
         }
     };
 
