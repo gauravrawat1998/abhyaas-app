@@ -10,6 +10,9 @@ import ViewAll from '../screens/AllCategories/ViewAll';
 import PerformanceScreen from '../screens/Profile/Performance';
 import EditProfileScreen from '../screens/Profile/EditProfile';
 import Question from '../screens/Question';
+import TakeTest from '../screens/TakeTest';
+import TestDetail from '../screens/TakeTest/TestDetail';
+import Searching from '../screens/TakeTest/Searching';
 
 const AUTH_STACK = [
   {
@@ -52,6 +55,21 @@ const AUTH_STACK = [
     key: 'Question',
     name: 'Question',
     component: Question,
+  },
+  {
+    key: 'TakeTest',
+    name: 'TakeTest',
+    component: TakeTest,
+  },
+  {
+    key: 'TestDetail',
+    name: 'TestDetail',
+    component: TestDetail,
+  },
+  {
+    key: 'Searching',
+    name: 'Searching',
+    component: Searching,
   },
 ];
 

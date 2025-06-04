@@ -14,7 +14,7 @@ const LoginScreen = ({navigation}:any)=>{
         isBack={false}
         headertext={'Login/Registration'}
         headersubtext={'Start Your Learning Journey!'}
-        headingflex={Platform.OS == 'ios' ? 0.2:0.16}
+        headingflex={0.16}
         >
             <Input 
             placeholder="Enter Your Mobile Number"

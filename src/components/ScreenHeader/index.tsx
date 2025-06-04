@@ -72,6 +72,7 @@ const styles = StyleSheet.create({
         fontSize: 12,
         flex: 1,
         fontWeight: '500',
+        paddingVertical:8,
     },
     searchIcon: {
         height: 14,

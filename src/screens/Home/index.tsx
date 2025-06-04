@@ -36,7 +36,7 @@ function HomeScreen({ navigation }: any) {
   return (
     <WrapperContainer
       isPadding={0}
-      headingflex={Platform.OS == 'ios' ? 0.24:0.2}
+      headingflex={Platform.OS == 'ios' ? 0.23:0.195}
       header={
         <View>
           <View style={styles.header_cont} >
@@ -84,7 +84,9 @@ function HomeScreen({ navigation }: any) {
                 topic={item.topic}
                 paper={item.paper}
                 mode={item.mode}
-                onPress={() => navigation.navigate("Question")}
+                onPress={() => navigation.navigate("TakeTest", {
+                  paper: item.paper
+                })}
               />
             )}
           />

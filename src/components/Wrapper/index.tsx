@@ -22,7 +22,7 @@ export const WrapperContainer = ({
   headertext,
   headersubtext,
   isBack = true,
-  headingflex = Platform.OS == 'ios' ? 0.15 : 0.13,
+  headingflex = Platform.OS == 'ios' ? 0.14 : 0.12,
   isPadding = 24,
 }: WrapperContainerProps) => {
   const navigation = useNavigation();
