@@ -22,7 +22,7 @@ export const WrapperContainer = ({
   headertext,
   headersubtext,
   isBack = true,
-  headingflex = 0.15,
+  headingflex = Platform.OS == 'ios' ? 0.15 : 0.13,
   isPadding = 24,
 }: WrapperContainerProps) => {
   const navigation = useNavigation();
@@ -39,7 +39,7 @@ export const WrapperContainer = ({
           style={{
             flexDirection: 'row',
             alignItems: 'center',
-            paddingTop: Platform.OS == 'ios' ? insets.top : insets.top + 12,
+            paddingTop: Platform.OS == 'ios' ? insets.top : insets.top+4,
             paddingHorizontal: insets.left
           }}>
           {isBack && (

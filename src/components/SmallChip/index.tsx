@@ -47,10 +47,11 @@ const styles = StyleSheet.create({
         width: 23,
         height: 23,
         position: 'absolute',
-        left: -6,
+        left: 6,
     },
     label: {
-        fontSize: 10,
+        fontSize: 13,
+        marginLeft:8,
         fontWeight: '700',
     },
     selectedLabel: {

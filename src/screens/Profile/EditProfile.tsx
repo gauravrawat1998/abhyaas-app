@@ -75,12 +75,12 @@ function EditProfileScreen({ navigation, route }: any) {
     return (
         <WrapperContainer
             isPadding={0}
-            isBack={false}
+            isBack={true}
             header={
                 <ScreenHeader
-                    headerText={route?.name}
+                    headerText={'Edit Profile'}
                     navigation={navigation}
-                    isDrawer={true}
+                    isDrawer={false}
                 />
             }>
             <KeyboardAvoidingView

@@ -40,7 +40,7 @@ const TestHeader = () => {
     return (
         <View style={styles.container}>
             <Text style={styles.heading}>हिंदी भाषा का परिचय</Text>
-            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+            <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent:'center' }}>
                 <Image source={images.timer} style={{ width: 20, height: 23 }} />
                 <View style={styles.timerContainer}>
                     <Text style={styles.timer}>-0:12</Text>
@@ -62,7 +62,7 @@ const Question = ({ navigation }: any) => {
     };
 
     return (
-        <WrapperContainer isBack={false} isPadding={0} header={<TestHeader />}>
+        <WrapperContainer isBack={true} isPadding={0} header={<TestHeader />}>
             <ScrollView
                 showsVerticalScrollIndicator={false}
                 contentContainerStyle={{
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
         alignItems: 'center',
-        margin: 25,
+        marginHorizontal: 25,
         flex: 1,
         overflow: 'hidden',
         justifyContent: 'space-between',

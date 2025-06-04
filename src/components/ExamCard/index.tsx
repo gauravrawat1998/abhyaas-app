@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
         marginTop: 5
     },
     topic: {
-        fontSize: 10,
+        fontSize: 12,
         fontWeight: '600',
         marginTop: 4
     },
@@ -142,13 +142,13 @@ const styles = StyleSheet.create({
         marginTop: 15
     },
     footerLabel: {
-        fontSize: 8,
+        fontSize: 10,
         fontWeight: '600',
         color: colors.grey,
 
     },
     footerValue: {
-        fontSize: 8,
+        fontSize: 10,
         fontWeight: '600',
         color: colors.black
     },

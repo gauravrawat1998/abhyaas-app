@@ -58,7 +58,7 @@ function ProfileScreen({navigation, route}: any) {
           isDrawer={true}
         />
       }>
-      <View style={styles.headercont}>
+      <Pressable onPress={()=>{navigation.navigate('EditProfileScreen')}} style={styles.headercont}>
         <View
           style={{
             backgroundColor: colors.profile_blue,
@@ -98,7 +98,7 @@ function ProfileScreen({navigation, route}: any) {
             Genius Grade: A+
           </Text>
         </View>
-      </View>
+      </Pressable>
       <View
         style={{
           backgroundColor: colors.profile_blue_background,
@@ -198,6 +198,7 @@ function ProfileScreen({navigation, route}: any) {
               topic={'Guaranteed Winning'}
               paper={'हिंदी भाषा का'}
               mode={'10,000'}
+              onPress={() => navigation.navigate("Question")}
             />
           </View>
         </ScrollView>

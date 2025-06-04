@@ -1,4 +1,4 @@
-import { Image, Pressable, StyleSheet, Text, TextInput, View } from "react-native"
+import { Image, Platform, Pressable, StyleSheet, Text, TextInput, View } from "react-native"
 import Button from "../../components/Button"
 import Input from "../../components/Input"
 import { WrapperContainer } from "../../components/Wrapper"
@@ -14,6 +14,7 @@ const LoginScreen = ({navigation}:any)=>{
         isBack={false}
         headertext={'Login/Registration'}
         headersubtext={'Start Your Learning Journey!'}
+        headingflex={Platform.OS == 'ios' ? 0.2:0.16}
         >
             <Input 
             placeholder="Enter Your Mobile Number"

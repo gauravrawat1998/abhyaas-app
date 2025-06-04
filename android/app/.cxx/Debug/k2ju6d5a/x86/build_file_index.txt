@@ -1,1 +1,0 @@
-/Users/nitinsharma/Desktop/Abhyaas/node_modules/react-native/ReactAndroid/cmake-utils/default-app-setup/CMakeLists.txt
